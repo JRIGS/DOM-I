@@ -108,6 +108,62 @@ aboutText.innerText = "About content elementum magna eros, ac posuere elvit temp
 let mainContentImg = document.getElementById('middle-img')
 mainContentImg.setAttribute('src', 'img/mid-page-accent.jpg')
 
+let firstBottomContent = document.querySelector('.bottom-content .text-content:nth-of-type(1)')
+let secondBottomContent = document.querySelector('.bottom-content .text-content:nth-of-type(2)')
+let thirdBottomContent = document.querySelector('.bottom-content .text-content:nth-of-type(3)')
+
+let servicesHeader = firstBottomContent.querySelector('h4')
+let servicesText = firstBottomContent.querySelector('p')
+servicesHeader.innerHTML = "Services"
+servicesText.innerHTML = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+let productHeader = secondBottomContent.querySelector('h4')
+let productText = secondBottomContent.querySelector('p')
+productHeader.innerHTML = "Product"
+productText.innerHTML = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+let visionHeader = thirdBottomContent.querySelector('h4')
+let visionText = thirdBottomContent.querySelector('p')
+visionHeader.innerHTML = "Vision"
+visionText.innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+let contactSection = document.querySelector('.contact')
+let contactHeader = contactSection.querySelector('h4')
+contactHeader.innerHTML = "Contact"
+
+let contactParagraphs = contactSection.querySelectorAll('p')
+
+contactParagraphs[0].innerText = "123 Way 456 Street \n Somewhere, USA"
+contactParagraphs[1].innerHTML = "1 (888) 888-8888"
+contactParagraphs[2].innerHTML = "sales@greatidea.io"
+
+let copyright = document.querySelector('footer')
+let copyrightText = copyright.querySelector ('p')
+
+copyright.innerHTML = "Copyright Great Idea! 2018"
+
+//Apending links
+
+const exampleOneLink = document.createElement('a') 
+exampleOneLink.textContent = 'Child One'               
+exampleOneLink.href = '#'                        
+nav.appendChild(exampleOneLink) 
+
+const exampleTwoLink = document.createElement('a') 
+exampleTwoLink.textContent = 'Child Two'               
+exampleTwoLink.href = '#'                        
+nav.appendChild(exampleTwoLink)
+
+//Green Text
+// let getNav = document.querySelector('nav')
+// let allNavLinks = getNav.querySelectorAll('a')
+// allNavLinks.style.color = 'green'
+
+let allNavLinks = nav.querySelectorAll('a');
+allNavLinks.forEach(link => {
+  link.style.color = 'green'
+})
+
 // "main-content": {
 //   "features-h4":"Features",
 //   "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -121,3 +177,13 @@ mainContentImg.setAttribute('src', 'img/mid-page-accent.jpg')
 //   "vision-h4":"Vision",
 //   "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
 // }
+
+// "contact": {
+//   "contact-h4" : "Contact",
+//   "address" : "123 Way 456 Street Somewhere, USA",
+//   "phone" : "1 (888) 888-8888",
+//   "email" : "sales@greatidea.io",
+// },
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+// },
